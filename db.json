@@ -1,0 +1,44 @@
+{
+    "cocktails": [
+      {
+        "id": 1,
+        "name": "Screwdriver",
+        "ingredients": [{
+          "ingredient": "Vodka",
+          "quantity": "1 oz."
+        }, 
+        {
+          "ingredient": "Orange Juice",
+          "quantity": "5 oz."
+        } ],
+        "rating": 5,
+        "category": "Basic",
+        "directions": "Mix the ingredients",
+        "description": "A basic orange juice drink",
+        "personalFavorite": true,
+        "image": "https://mixthatdrink.com/wp-content/uploads/2009/02/screwdriver-drink-featured-735x735.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Whiskey Sour",
+        "ingredients": [{
+          "ingredient": "Whiskey",
+          "quantity": "1 oz."
+        }, 
+        {
+          "ingredient": "Egg White",
+          "quantity": "1"
+        },
+        {
+            "ingredient": "Lime",
+          "quantity": "1"
+        } ],
+        "rating": 5,
+        "category": "Classic",
+        "directions": "whisk egg white and mix with whiskey, squeeze in lime juice",
+        "description": "A refreshing sour whiskey drink",
+        "personalFavorite": true,
+        "image": "https://www.simplyrecipes.com/thmb/ql6s7E7JDvHEs_bNvH_8D-dGcuQ=/1333x1333/smart/filters:no_upscale()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__Whiskey-Sour-LEAD-1-a6981aa2e5614f599f23c7b672ca1923.jpg"
+      }
+    ]
+    }
