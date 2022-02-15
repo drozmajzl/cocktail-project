@@ -8,7 +8,7 @@ function RecipeForm({handleNewCocktail}){
     const [quantity, setQuantity] = useState('');
     const [description, setDescription] = useState('');
     const [directions, setDirections] = useState('');
-    const [imageURL, setImageURL] = useState('https://media.istockphoto.com/photos/empty-cocktail-glass-isolated-on-white-background-picture-id1138785313?k=20&m=1138785313&s=612x612&w=0&h=H3TeWlcnbvoJMMeDj2vKBAKcrVY-0NbrsvlM5HKYa5o=');
+    const [imageURL, setImageURL] = useState('');
 
     const newCocktail = {
         "name": name,
@@ -16,13 +16,12 @@ function RecipeForm({handleNewCocktail}){
         "category": category,
         "directions": directions,
         "description": description,
-        "image": imageURL,
+        "image": imageURL ? imageURL : 'https://media.istockphoto.com/photos/empty-cocktail-glass-isolated-on-white-background-picture-id1138785313?k=20&m=1138785313&s=612x612&w=0&h=H3TeWlcnbvoJMMeDj2vKBAKcrVY-0NbrsvlM5HKYa5o=',
         "rating": 0,
       };
 
       function handleSubmitIngredient(e) {
           e.preventDefault()
-          console.log(ingredient)
           const updatedIngredients = [...ingredients, {
               "ingredient": ingredient,
               "quantity": quantity
@@ -35,9 +34,16 @@ function RecipeForm({handleNewCocktail}){
       function handleSubmit(e) {
           e.preventDefault();
           console.log(newCocktail);
-          setName('');
           handleNewCocktail(newCocktail);
         //   ADD POST FUNCTIONALITY
+        setName('');
+        setCategory('');
+        setIngredients([]);
+        setDescription('');
+        setDirections('');
+        setImageURL('');     
+        setIngredient('');
+        setQuantity('');   
       }
 
     const ingredientsDisplay = ingredients.map(ingredient => (

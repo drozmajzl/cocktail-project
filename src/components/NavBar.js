@@ -1,20 +1,19 @@
-
 import { NavLink } from "react-router-dom";
 import Filter from "./Filter";
 import RecipeForm from "./RecipeForm";
 
 
-function NavBar(){
+function NavBar({ handleSearch, search, handleCategoryFilter, categoryFilter }){
 
     return(
     <nav className="topnav">
         {/* {searchbar, category dropdown?, create new cocktail button} */}
-        <input type="text" placeholder="Search.."></input>
-        <select name="catogories" id="categories">
+        <input type="text" placeholder="Search.." value={search} onChange={handleSearch}></input>
+        <select name="categories" id="categories" value={categoryFilter} onChange={handleCategoryFilter}>
             <option value="All">All</option>
             <option value="Classic">Classic</option>
-            <option value="Classic">Basic</option>
-            <option value="Classic">Tiki</option>
+            <option value="Basic">Basic</option>
+            <option value="Tiki">Tiki</option>
         </select>
         <NavLink
         to="/"
