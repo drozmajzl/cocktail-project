@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import Filter from "./Filter";
 import RecipeForm from "./RecipeForm";
 
 
