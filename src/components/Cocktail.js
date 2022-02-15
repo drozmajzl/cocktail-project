@@ -5,9 +5,9 @@ function Cocktail ({ cocktail }){
     return(
         <div>
             <h2>{name}</h2>
-            <img src={image}></img>
+            <img id="cocktailimage" src={image}></img>
             <h3>{description}</h3>
-            <p>Rating: x/5 Stars</p>
+            <p>Rating: {rating}/5 Stars</p>
         </div>
     )
 

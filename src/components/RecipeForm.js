@@ -8,7 +8,7 @@ function RecipeForm({handleNewCocktail}){
     const [quantity, setQuantity] = useState('');
     const [description, setDescription] = useState('');
     const [directions, setDirections] = useState('');
-    const [imageURL, setImageURL] = useState('');
+    const [imageURL, setImageURL] = useState('https://media.istockphoto.com/photos/empty-cocktail-glass-isolated-on-white-background-picture-id1138785313?k=20&m=1138785313&s=612x612&w=0&h=H3TeWlcnbvoJMMeDj2vKBAKcrVY-0NbrsvlM5HKYa5o=');
 
     const newCocktail = {
         "name": name,
