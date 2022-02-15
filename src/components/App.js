@@ -1,9 +1,9 @@
-import './App.css';
-import CocktailList from './components/CocktailList';
-import NavBar from './components/NavBar';
-import Home from './components/Home';
+import '../App.css';
+import CocktailList from './CocktailList';
+import NavBar from './NavBar';
+import Home from './Home';
 import { Switch, Route } from 'react-router-dom';
-import RecipeForm from './components/RecipeForm';
+import RecipeForm from './RecipeForm';
 
 function App() {
   return (
