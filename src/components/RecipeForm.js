@@ -76,6 +76,7 @@ function RecipeForm({handleNewCocktail}){
                     <option value="classic">Classic</option>
                     <option value="basic">Basic</option>
                     <option value="tiki">Tiki</option>
+                    <option value="latin">Latin</option>
                 </select>
                 <br/>
             </form>
@@ -94,11 +95,11 @@ function RecipeForm({handleNewCocktail}){
             <form onSubmit={handleSubmit}>
             <label>Description:</label>
                 <br/>
-                <input type="text" name="description" value={description} onChange={(e) => setDescription(e.target.value)}></input>
+                <textarea type="text" name="description" value={description} onChange={(e) => setDescription(e.target.value)}></textarea>
                 <br/>
                 <label>Directions:</label>
                 <br/>
-                <input type="text" name="directions" value={directions} onChange={(e) => setDirections(e.target.value)}></input>
+                <textarea type="text" name="directions" value={directions} onChange={(e) => setDirections(e.target.value)}></textarea>
                 <br/>
                 <label>Add Image (Optional):</label>
                 <br/>

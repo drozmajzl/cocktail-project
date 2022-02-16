@@ -13,6 +13,7 @@ function NavBar({ handleSearch, search, handleCategoryFilter, categoryFilter }){
             <option value="Classic">Classic</option>
             <option value="Basic">Basic</option>
             <option value="Tiki">Tiki</option>
+            <option value="Latin">Latin</option>
         </select>
         <NavLink
         to="/"
