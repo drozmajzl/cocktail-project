@@ -1,3 +1,4 @@
+import '../App.css';
 import {react, useEffect, useState} from "react";
 import Cocktail from "./Cocktail";
 

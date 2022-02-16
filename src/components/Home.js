@@ -1,3 +1,4 @@
+import '../App.css';
 import Cocktail from "./Cocktail";
 
 function Home({ cocktails, handleRemove, updateFavorites }){

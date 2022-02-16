@@ -1,5 +1,5 @@
+import '../App.css';
 import { NavLink } from "react-router-dom";
-// import RecipeForm from "./RecipeForm";
 
 
 function NavBar(){

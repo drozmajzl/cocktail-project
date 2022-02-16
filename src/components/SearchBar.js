@@ -1,3 +1,4 @@
+import '../App.css';
 
 function SearchBar({ handleSearch, search, handleCategoryFilter, categoryFilter }) {
 

@@ -1,3 +1,4 @@
+import '../App.css';
 import { useState } from 'react';
 
 function Cocktail ({ cocktail, updateFavorites, handleRemove }){
@@ -28,7 +29,7 @@ function Cocktail ({ cocktail, updateFavorites, handleRemove }){
 
 
     return(
-        <div className="cocktail">
+        <div className={favorited ? "favoriteCocktail" : "cocktail"}>
             <div onClick={() => setMoreInfoDisplay(!moreInfoDisplay)}>
                 <h2>{name}</h2>
                 <img id="cocktailimage" src={image}></img>

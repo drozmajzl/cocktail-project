@@ -1,11 +1,19 @@
+
 .App {
+  /* TODO good background - color or image?  */
   text-align: center;
+  background: linear-gradient(172deg, #38517b, #545c6a, #665a74, #acae54);
+  background-size: 800% 800%;
+
+  -webkit-animation: AnimationName 4s ease infinite;
+  -moz-animation: AnimationName 4s ease infinite;
+  animation: AnimationName 4s ease infinite;
 }
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
+} */
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -38,6 +46,27 @@
 }
 
 #cocktailimage {
+  /* TODO scale images to page size */
   height: 100px;
   width: 100px;
+}
+
+.favoriteCocktail {
+  background-color: pink;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 53%}
+  50%{background-position:100% 48%}
+  100%{background-position:0% 53%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 53%}
+  50%{background-position:100% 48%}
+  100%{background-position:0% 53%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 53%}
+  50%{background-position:100% 48%}
+  100%{background-position:0% 53%}
 }
