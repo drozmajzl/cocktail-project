@@ -31,6 +31,12 @@ function RecipeForm({handleNewCocktail}){
           setQuantity('')
       }
 
+      function handleDeleteIngredient(e) {
+          const revisedIngredients = ingredients.filter(ingredient => `${ingredient.quantity} ${ingredient.ingredient}` !== e.target.previousSibling.textContent)
+          console.log(revisedIngredients)
+          setIngredients(revisedIngredients);
+      }
+
 //TODO THROW ERROR IF NO CATEGORY IS SELECTED
 
       function handleSubmit(e) {
@@ -74,7 +80,10 @@ function RecipeForm({handleNewCocktail}){
       }
 
     const ingredientsDisplay = ingredients.map(ingredient => (
-        <li key={ingredient.ingredient}>{ingredient.quantity} {ingredient.ingredient}</li>
+        <div key={`${ingredient.ingredient}Div`}>
+            <li key={ingredient.ingredient}>{ingredient.quantity} {ingredient.ingredient}</li>
+            <button key={`${ingredient.ingredient}Button`} id="deleteIngredient" onClick={handleDeleteIngredient}>X</button>
+        </div>
     ));
 
     return(
