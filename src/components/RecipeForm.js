@@ -17,7 +17,8 @@ function RecipeForm({handleNewCocktail}){
         "directions": directions,
         "description": description,
         "image": imageURL ? imageURL : 'https://media.istockphoto.com/photos/empty-cocktail-glass-isolated-on-white-background-picture-id1138785313?k=20&m=1138785313&s=612x612&w=0&h=H3TeWlcnbvoJMMeDj2vKBAKcrVY-0NbrsvlM5HKYa5o=',
-        "personalFavorite":false
+        "personalFavorite":false,
+        "userAdded": true
       };
 
       function handleSubmitIngredient(e) {

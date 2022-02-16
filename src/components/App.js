@@ -37,6 +37,14 @@ function App() {
     setCocktails(newFavorites)
   }
 
+  function handleRemove(cocktailToRemove){
+    const revisedList = cocktails.filter(cocktail => cocktail.id !== cocktailToRemove);
+    fetch(`http://localhost:3000/cocktails/${cocktailToRemove}`, {
+      method: 'DELETE',
+  })
+    setCocktails(revisedList);
+  }
+
   useEffect(()=>{
       fetch('http://localhost:3000/cocktails')
       .then(r=>r.json())
@@ -53,7 +61,7 @@ function App() {
         <Home cocktails={cocktails}/>
       </Route >
       <Route exact path="/menu">
-        <CocktailList list={cocktails} search={search} categoryFilter={categoryFilter} updateFavorites={updateFavorites}/>
+        <CocktailList list={cocktails} search={search} categoryFilter={categoryFilter} updateFavorites={updateFavorites} handleRemove={handleRemove}/>
       </Route>
       <Route exact path="/addCocktail">
         <RecipeForm handleNewCocktail={handleNewCocktail} />

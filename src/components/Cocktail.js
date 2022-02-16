@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
-function Cocktail ({ cocktail, updateFavorites }){
+function Cocktail ({ cocktail, updateFavorites, handleRemove }){
     const [moreInfoDisplay, setMoreInfoDisplay] = useState(false);
-    const { id, name, image, ingredients, personalFavorite, category, directions, description }=cocktail;
+    const { id, name, image, ingredients, personalFavorite, category, directions, description, userAdded } = cocktail;
     const [favorited, setFavorited]=useState(personalFavorite)
 
     function handleFavorite(){
@@ -35,6 +35,7 @@ function Cocktail ({ cocktail, updateFavorites }){
             <p> {moreInfoDisplay ? ingredientsList : null } </p>
             <p> {moreInfoDisplay ? directions : null } </p>
             <button className="favorite" onClick={handleFavorite}>{favorited ? "Unfavorite ★" : "Favorite ✰"}</button>
+            {userAdded ? <button onClick={() => handleRemove(id)}>REMOVE</button> : null}
         </div>
     )
 
