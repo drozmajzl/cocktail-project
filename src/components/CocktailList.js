@@ -6,7 +6,11 @@ function CocktailList({ list, search, categoryFilter, updateFavorites, handleRem
     const filteredByCategory = filteredCocktails.filter(cocktail => {
         if (categoryFilter === 'all'){
             return true;
-        } else {
+        }
+        else if (categoryFilter === 'userAdded'){
+            return (cocktail.userAdded)
+        }
+         else {
             return cocktail.category === categoryFilter;
         }
     });

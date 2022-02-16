@@ -3,10 +3,11 @@ import RecipeForm from "./RecipeForm";
 
 
 function NavBar({ handleSearch, search, handleCategoryFilter, categoryFilter }){
+  
+// {window.location.pathname === "/menu" ? console.log('success') : console.log(window.location.pathname)}
 
     return(
     <nav className="topnav">
-        {/* {searchbar, category dropdown?, create new cocktail button} */}
         <input type="text" placeholder="Search.." value={search} onChange={handleSearch}></input>
         <select name="categories" id="categories" value={categoryFilter} onChange={handleCategoryFilter}>
             <option value="all">All</option>
@@ -15,6 +16,7 @@ function NavBar({ handleSearch, search, handleCategoryFilter, categoryFilter }){
             <option value="tiki">Tiki</option>
             <option value="latin">Latin</option>
             <option value="other">Other</option>
+            <option value="userAdded">User Added</option>
         </select>
         <NavLink
         to="/"

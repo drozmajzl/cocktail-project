@@ -18,11 +18,10 @@ function App() {
     // const updatedList = [...cocktails, newCocktail];
     // setCocktails(updatedList);
   }
-  console.log(cocktails)
+
 
   function handleSearch(e) {
     setSearch(e.target.value);
-    console.log(search)
   }
 
   function handleCategoryFilter(e){

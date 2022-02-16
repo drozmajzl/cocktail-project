@@ -34,7 +34,6 @@ function RecipeForm({handleNewCocktail}){
 
       function handleDeleteIngredient(e) {
           const revisedIngredients = ingredients.filter(ingredient => `${ingredient.quantity} ${ingredient.ingredient}` !== e.target.previousSibling.textContent)
-          console.log(revisedIngredients)
           setIngredients(revisedIngredients);
       }
 
