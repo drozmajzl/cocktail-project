@@ -25,6 +25,18 @@ function App() {
     setCategoryFilter(e.target.value);
   }
 
+  function updateFavorites(updatedCocktail){
+    const newFavorites = cocktails.map(cocktail=>{
+      if (cocktail.id===updatedCocktail.id){
+        return updatedCocktail
+      }
+      else {
+        return cocktail
+      }
+    })
+    setCocktails(newFavorites)
+  }
+
   useEffect(()=>{
       fetch('http://localhost:3000/cocktails')
       .then(r=>r.json())
@@ -41,7 +53,7 @@ function App() {
         <Home cocktails={cocktails}/>
       </Route >
       <Route exact path="/menu">
-        <CocktailList list={cocktails} search={search} categoryFilter={categoryFilter}/>
+        <CocktailList list={cocktails} search={search} categoryFilter={categoryFilter} updateFavorites={updateFavorites}/>
       </Route>
       <Route exact path="/addCocktail">
         <RecipeForm handleNewCocktail={handleNewCocktail} />

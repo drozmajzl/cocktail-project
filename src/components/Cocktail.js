@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-function Cocktail ({ cocktail }){
+function Cocktail ({ cocktail, updateFavorites }){
     const [moreInfoDisplay, setMoreInfoDisplay] = useState(false);
     const { id, name, image, ingredients, personalFavorite, category, directions, description }=cocktail;
     const [favorited, setFavorited]=useState(personalFavorite)
@@ -22,6 +22,8 @@ function Cocktail ({ cocktail }){
             ),
           }
           )
+          .then(r=>r.json())
+          .then(data=>updateFavorites(data))
     }
 
     const ingredientsList = ingredients.map(ingredient => <li key={ingredient.ingredient}>{ingredient.quantity} {ingredient.ingredient}</li>)

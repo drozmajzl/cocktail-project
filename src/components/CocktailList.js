@@ -1,7 +1,7 @@
 import {react, useEffect, useState} from "react";
 import Cocktail from "./Cocktail";
 
-function CocktailList({ list, search, categoryFilter }){
+function CocktailList({ list, search, categoryFilter, updateFavorites }){
     const filteredCocktails = list.filter(cocktail => cocktail.name.toLowerCase().includes(search.toLowerCase()) || cocktail.description.toLowerCase().includes(search.toLowerCase()) );
     const filteredByCategory = filteredCocktails.filter(cocktail => {
         if (categoryFilter === 'All'){
@@ -11,7 +11,7 @@ function CocktailList({ list, search, categoryFilter }){
         }
     });
 
-    const cocktailsToDisplay = filteredByCategory.map(cocktail => <Cocktail key={cocktail.id} cocktail={cocktail}/>)
+    const cocktailsToDisplay = filteredByCategory.map(cocktail => <Cocktail key={cocktail.id} cocktail={cocktail} updateFavorites={updateFavorites}/>)
 
     return(
         <div>
