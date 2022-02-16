@@ -2,6 +2,7 @@ import '../App.css';
 import {useState, useEffect} from 'react';
 import CocktailList from './CocktailList';
 import NavBar from './NavBar';
+import SearchBar from './SearchBar';
 import Home from './Home';
 import { Switch, Route } from 'react-router-dom';
 import RecipeForm from './RecipeForm';
@@ -64,6 +65,9 @@ function App() {
         <Home cocktails={cocktails} handleRemove={handleRemove} updateFavorites={updateFavorites}/>
       </Route >
       <Route exact path="/menu">
+        <SearchBar handleSearch={handleSearch} search={search}
+                   handleCategoryFilter={handleCategoryFilter} categoryFilter={categoryFilter} 
+          />
         <CocktailList list={cocktails} search={search} categoryFilter={categoryFilter} updateFavorites={updateFavorites} handleRemove={handleRemove}/>
       </Route>
       <Route exact path="/addCocktail">

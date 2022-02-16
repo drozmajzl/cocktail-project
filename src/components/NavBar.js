@@ -1,23 +1,11 @@
 import { NavLink } from "react-router-dom";
-import RecipeForm from "./RecipeForm";
+// import RecipeForm from "./RecipeForm";
 
 
-function NavBar({ handleSearch, search, handleCategoryFilter, categoryFilter }){
+function NavBar(){
   
-// {window.location.pathname === "/menu" ? console.log('success') : console.log(window.location.pathname)}
-
     return(
     <nav className="topnav">
-        <input type="text" placeholder="Search.." value={search} onChange={handleSearch}></input>
-        <select name="categories" id="categories" value={categoryFilter} onChange={handleCategoryFilter}>
-            <option value="all">All</option>
-            <option value="classic">Classic</option>
-            <option value="basic">Basic</option>
-            <option value="tiki">Tiki</option>
-            <option value="latin">Latin</option>
-            <option value="other">Other</option>
-            <option value="userAdded">User Added</option>
-        </select>
         <NavLink
         to="/"
         exact
