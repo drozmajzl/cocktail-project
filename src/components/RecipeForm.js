@@ -59,7 +59,6 @@ function RecipeForm({handleNewCocktail}){
                 alert("Please enter directions.");
                 break;
             default:
-                handleNewCocktail(newCocktail);
                 fetch("http://localhost:3000/cocktails",{
                     method: "POST",
                     headers: {
@@ -69,6 +68,8 @@ function RecipeForm({handleNewCocktail}){
                         newCocktail
                     ),
                 })
+                .then (()=>handleNewCocktail());
+                
                 setName('');
                 setCategory('');
                 setIngredients([]);

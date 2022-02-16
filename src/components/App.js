@@ -11,10 +11,14 @@ function App() {
   const [search, setSearch] = useState('');
   const [categoryFilter, setCategoryFilter] = useState('all');
 
-  function handleNewCocktail(newCocktail) {
-    const updatedList = [...cocktails, newCocktail];
-    setCocktails(updatedList);
+  function handleNewCocktail() {
+    fetch('http://localhost:3000/cocktails')
+      .then(r=>r.json())
+      .then(data=>setCocktails(data))
+    // const updatedList = [...cocktails, newCocktail];
+    // setCocktails(updatedList);
   }
+  console.log(cocktails)
 
   function handleSearch(e) {
     setSearch(e.target.value);
@@ -58,7 +62,7 @@ function App() {
       </header>
       <Switch>
       <Route exact path="/">
-        <Home cocktails={cocktails}/>
+        <Home cocktails={cocktails} handleRemove={handleRemove} updateFavorites={updateFavorites}/>
       </Route >
       <Route exact path="/menu">
         <CocktailList list={cocktails} search={search} categoryFilter={categoryFilter} updateFavorites={updateFavorites} handleRemove={handleRemove}/>

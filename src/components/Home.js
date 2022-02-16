@@ -1,9 +1,9 @@
 import Cocktail from "./Cocktail";
 
-function Home({ cocktails }){
+function Home({ cocktails, handleRemove, updateFavorites }){
 
 const favorited=(cocktails.filter(cocktail=>cocktail.personalFavorite))
-const displayCocktails=favorited.map(cocktail=><Cocktail key={cocktail.id} cocktail={cocktail}/>)
+const displayCocktails=favorited.map(cocktail=><Cocktail key={cocktail.id} cocktail={cocktail} handleRemove={handleRemove} updateFavorites={updateFavorites}/>)
 
 return(
     <div>
