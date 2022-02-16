@@ -9,11 +9,11 @@ function NavBar({ handleSearch, search, handleCategoryFilter, categoryFilter }){
         {/* {searchbar, category dropdown?, create new cocktail button} */}
         <input type="text" placeholder="Search.." value={search} onChange={handleSearch}></input>
         <select name="categories" id="categories" value={categoryFilter} onChange={handleCategoryFilter}>
-            <option value="All">All</option>
-            <option value="Classic">Classic</option>
-            <option value="Basic">Basic</option>
-            <option value="Tiki">Tiki</option>
-            <option value="Latin">Latin</option>
+            <option value="all">All</option>
+            <option value="classic">Classic</option>
+            <option value="basic">Basic</option>
+            <option value="tiki">Tiki</option>
+            <option value="latin">Latin</option>
         </select>
         <NavLink
         to="/"
