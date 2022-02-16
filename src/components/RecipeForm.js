@@ -92,6 +92,7 @@ function RecipeForm({handleNewCocktail}){
                     <option value="basic">Basic</option>
                     <option value="tiki">Tiki</option>
                     <option value="latin">Latin</option>
+                    <option value="other">Other</option>
                 </select>
                 <br/>
             </form>
