@@ -38,7 +38,7 @@ function App() {
       </header>
       <Switch>
       <Route exact path="/">
-        <Home />
+        <Home cocktails={cocktails}/>
       </Route >
       <Route exact path="/menu">
         <CocktailList list={cocktails} search={search} categoryFilter={categoryFilter}/>

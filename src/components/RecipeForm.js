@@ -17,7 +17,7 @@ function RecipeForm({handleNewCocktail}){
         "directions": directions,
         "description": description,
         "image": imageURL ? imageURL : 'https://media.istockphoto.com/photos/empty-cocktail-glass-isolated-on-white-background-picture-id1138785313?k=20&m=1138785313&s=612x612&w=0&h=H3TeWlcnbvoJMMeDj2vKBAKcrVY-0NbrsvlM5HKYa5o=',
-        "rating": 0,
+        "personalFavorite":false
       };
 
       function handleSubmitIngredient(e) {
@@ -36,6 +36,18 @@ function RecipeForm({handleNewCocktail}){
           console.log(newCocktail);
           handleNewCocktail(newCocktail);
         //   ADD POST FUNCTIONALITY
+        fetch("http://localhost:3000/cocktails",{
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(
+                newCocktail
+            ),
+          })
+      
+
+
         setName('');
         setCategory('');
         setIngredients([]);

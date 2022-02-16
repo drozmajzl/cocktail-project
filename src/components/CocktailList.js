@@ -15,6 +15,7 @@ function CocktailList({ list, search, categoryFilter }){
 
     return(
         <div>
+        <h1>MENU</h1>
         {cocktailsToDisplay}
         </div>
     )
