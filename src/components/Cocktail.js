@@ -1,5 +1,3 @@
-// TODO IMPLEMENT PATCH ON FAVORITE
-
 import { useState } from 'react';
 
 function Cocktail ({ cocktail, updateFavorites }){

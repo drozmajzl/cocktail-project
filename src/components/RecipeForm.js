@@ -31,11 +31,11 @@ function RecipeForm({handleNewCocktail}){
           setQuantity('')
       }
 
+//TODO THROW ERROR IF NO CATEGORY IS SELECTED
+
       function handleSubmit(e) {
           e.preventDefault();
-          console.log(newCocktail);
           handleNewCocktail(newCocktail);
-        //   ADD POST FUNCTIONALITY
         fetch("http://localhost:3000/cocktails",{
             method: "POST",
             headers: {
@@ -61,8 +61,6 @@ function RecipeForm({handleNewCocktail}){
     const ingredientsDisplay = ingredients.map(ingredient => (
         <li key={ingredient.ingredient}>{ingredient.quantity} {ingredient.ingredient}</li>
     ));
-
-    console.log(ingredients);
 
     return(
         <div>
