@@ -35,27 +35,42 @@ function RecipeForm({handleNewCocktail}){
 
       function handleSubmit(e) {
           e.preventDefault();
-          handleNewCocktail(newCocktail);
-        fetch("http://localhost:3000/cocktails",{
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(
-                newCocktail
-            ),
-          })
-      
-
-
-        setName('');
-        setCategory('');
-        setIngredients([]);
-        setDescription('');
-        setDirections('');
-        setImageURL('');     
-        setIngredient('');
-        setQuantity('');   
+          switch (true) {
+            case (newCocktail.name.length < 1):
+                alert("Please enter the cocktail's name.");
+                break;
+            case (!newCocktail.category):
+                alert("Please select a category.");
+                break;
+            case (newCocktail.ingredients.length < 1):
+                alert("Please enter ingredients.");
+                break;
+            case (newCocktail.description.length < 1):
+                alert("Please enter a description.");
+                break;
+            case (newCocktail.directions.length < 1):
+                alert("Please enter directions.");
+                break;
+            default:
+                handleNewCocktail(newCocktail);
+                fetch("http://localhost:3000/cocktails",{
+                    method: "POST",
+                    headers: {
+                    "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(
+                        newCocktail
+                    ),
+                })
+                setName('');
+                setCategory('');
+                setIngredients([]);
+                setDescription('');
+                setDirections('');
+                setImageURL('');     
+                setIngredient('');
+                setQuantity('');
+        }
       }
 
     const ingredientsDisplay = ingredients.map(ingredient => (

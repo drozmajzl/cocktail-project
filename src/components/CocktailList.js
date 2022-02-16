@@ -4,7 +4,7 @@ import Cocktail from "./Cocktail";
 function CocktailList({ list, search, categoryFilter, updateFavorites }){
     const filteredCocktails = list.filter(cocktail => cocktail.name.toLowerCase().includes(search.toLowerCase()) || cocktail.description.toLowerCase().includes(search.toLowerCase()) );
     const filteredByCategory = filteredCocktails.filter(cocktail => {
-        if (categoryFilter === 'All'){
+        if (categoryFilter === 'all'){
             return true;
         } else {
             return cocktail.category === categoryFilter;
