@@ -12,8 +12,7 @@
 }
 
 .App-header {
-  /* background-color: #282c34; */
-  /* min-height: 100vh; */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,23 +21,39 @@
   color: white;
 }
 
+
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#home-div{
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+
 }
 
+#categories {
+  padding: 9px;
+  border-radius:15px;
+  border: 2px solid #E6EEFF;
+
+}
+#menudiv{
+  padding-top: 35px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-rows: repeat(10, 1fr); */
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  }
 #cocktailimage {
   /* TODO scale images to page size */
-  height: 100px;
-  width: 100px;
+  /* height: 10vw;
+  width: 10vw; */
+  padding: 10px;
+  width: 50%;
+    /* height: 15vw; */
+    /* object-fit: cover; */
 }
 
 .favoriteCocktail {
@@ -147,32 +162,51 @@
   box-shadow: none;
   transform: translateY(0);
 }
+
+.card-container{
+  padding: 10px 16px;
+  width: 30vw;
+  display:flex;
+}
+
 #cocktail-card {
-  width: 90%;
   display: flex;
   flex-direction: column;
   border: 3px #4a4a4a solid;
-  height: 30%;
+  height: 30vw;
   text-align: center;
-  padding: 2px 16px;
+  padding: 16px;
   justify-content: center;
   border-radius: 15px;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
+  
 }
 .card-header {
-  height: 30%;
-  /* color: #4a4a4a; */
+  height: fit-content;
+  width: fit-content;
   /* background: #E6EEFF; */
   color: #E6EEFF;
   border: 3px #FF99EE solid;
   text-align: center;
   border-radius: 15px;
   float:left;
-  width: 30%
+
 }
-.card-container{
-padding: 10px 16px;
+
+
+#cocktailimage{
+  float: right;
+  position:relative;
+}
+
+#cocktail-card:hover{
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+#card-button{
+  width: 20%;
 }
 
 .form-card {
@@ -192,21 +226,12 @@ padding: 10px 16px;
 .form-container{
   padding: 10px 16px;
 }
-#cocktail-card:hover{
-  color: #fff;
-  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-  transform: translateY(-2px);
-}
-#card-button{
-  width: 20%;
-}
+
 .topnav {
   display:inline-block;
   justify-content: right;
 }
-#cocktailimage{
-  float: left;
-}
+
 input[type=text] {
   width: 50%;
   padding: 12px 20px;
@@ -235,13 +260,15 @@ input[type=text] {
   --neon-border-color: #FF99EE;
 }
 
-/* body {
-  font-family: 'Exo 2', sans-serif;
+/* body { */
+  /* font-family: 'Exo 2', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;  
   background: #000;
-  min-height: 100vh;
+  min-height: 100vh; */
+  /* margin: 0;
+  padding: 0;
 } */
 
 .logo {

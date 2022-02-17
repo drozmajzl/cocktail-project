@@ -1,9 +1,11 @@
 import '../App.css';
-import { NavLink } from "react-router-dom";
+import { NavLink, useRouteMatch } from "react-router-dom";
 
 
 
 function NavBar(){
+  let homeRoute = useRouteMatch({exact: true, path: '/'});
+
   
     return(
     <nav className="topnav">
@@ -12,9 +14,10 @@ function NavBar(){
         to="/"
         exact
         >
+        {homeRoute ? null : 
         <button className="button-28" type="button">
         ⌂
-        </button>
+        </button>}
         </NavLink>
         <NavLink
         to="/menu"
@@ -29,7 +32,7 @@ function NavBar(){
         exact
         >
         <button className="button-28" type="button">
-        🍸 Add!
+        🍸 Submit a Cocktail🍸
         </button>
       </NavLink>
     </nav>

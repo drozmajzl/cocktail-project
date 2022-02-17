@@ -4,7 +4,7 @@ function SearchBar({ handleSearch, search, handleCategoryFilter, categoryFilter 
 
     return (
         <div>
-            <input type="text" placeholder="Search.." value={search} onChange={handleSearch}></input>
+            <input type="text" placeholder="Search..." value={search} onChange={handleSearch}></input>
             <select name="categories" id="categories" value={categoryFilter} onChange={handleCategoryFilter}>
                 <option value="all">All</option>
                 <option value="classic">Classic</option>

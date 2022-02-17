@@ -4,7 +4,7 @@ import CocktailList from './CocktailList';
 import NavBar from './NavBar';
 import SearchBar from './SearchBar';
 import Home from './Home';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, useRouteMatch } from 'react-router-dom';
 import RecipeForm from './RecipeForm';
 
 
@@ -12,6 +12,7 @@ function App() {
   const [cocktails, setCocktails]=useState([]);
   const [search, setSearch] = useState('');
   const [categoryFilter, setCategoryFilter] = useState('all');
+  let homeRoute = useRouteMatch({exact: true, path: '/'});
 
   function handleNewCocktail() {
     fetch('http://localhost:3000/cocktails')
@@ -58,7 +59,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <header className={homeRoute ? "App-header" : "mini-header"}>
         <NavBar handleSearch={handleSearch} search={search} handleCategoryFilter={handleCategoryFilter} categoryFilter={categoryFilter}/>
       </header>
       <Switch>

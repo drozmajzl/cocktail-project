@@ -19,10 +19,12 @@ function CocktailList({ list, search, categoryFilter, updateFavorites, handleRem
     const cocktailsToDisplay = filteredByCategory.map(cocktail => <Cocktail key={cocktail.id} cocktail={cocktail} updateFavorites={updateFavorites} handleRemove={handleRemove}/>)
 
     return(
-        <div>
-        <h1>MENU</h1>
-        {cocktailsToDisplay}
-        </div>
+        <>
+            <h1>MENU</h1>
+            <div id="menudiv">
+                {cocktailsToDisplay}
+            </div>
+        </>
     )
 }
 
