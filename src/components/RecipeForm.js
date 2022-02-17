@@ -89,7 +89,8 @@ function RecipeForm({handleNewCocktail}){
     ));
 
     return(
-        <div>
+        <div className="form-container">
+        <div className="form-card">
             <h1>Add a New Cocktail Recipe</h1>
             <form>
                 <label>Cocktail Name:</label>
@@ -110,30 +111,32 @@ function RecipeForm({handleNewCocktail}){
             <form name="ingredients" onSubmit={handleSubmitIngredient}>
                     <label>Ingredient:</label>
                     <br/>
-                    <input type="text" name="ingredient" value={ingredient} onChange={(e) => setIngredient(e.target.value)}></input>
+                    <input className="ingredient-input" type="text" name="ingredient" value={ingredient} onChange={(e) => setIngredient(e.target.value)}></input>
                     <br/>
                     <label>Quantity:</label>
                     <br/>
-                    <input type="text" name="quantity" id="ingredientQuantity" value={quantity} onChange={(e) => setQuantity(e.target.value)}></input>
-                    <input type="submit" name="addIngredient" value="Add Ingredient" id="ingredientName"></input>
+                    <input className="ingredient-input" type="text" name="quantity" id="ingredientQuantity" value={quantity} onChange={(e) => setQuantity(e.target.value)}></input>
+                    <br/>
+                    <input className="button-29" type="submit" name="addIngredient" value="Add Ingredient" id="ingredientName"></input>
                     {/* Take ingredient + quantity inputs, create object, add object to array of ingredients (in state), */}
             </form>
             {ingredientsDisplay}
             <form onSubmit={handleSubmit}>
             <label>Description:</label>
                 <br/>
-                <textarea type="text" name="description" value={description} onChange={(e) => setDescription(e.target.value)}></textarea>
+                <textarea className="d-input"type="text" name="description" value={description} onChange={(e) => setDescription(e.target.value)}></textarea>
                 <br/>
                 <label>Directions:</label>
                 <br/>
-                <textarea type="text" name="directions" value={directions} onChange={(e) => setDirections(e.target.value)}></textarea>
+                <textarea className="d-input"type="text" name="directions" value={directions} onChange={(e) => setDirections(e.target.value)}></textarea>
                 <br/>
                 <label>Add Image (Optional):</label>
                 <br/>
                 <input type="text" name="Image" value={imageURL} onChange={(e) => setImageURL(e.target.value)}></input>
                 <br/>
-                <input type="submit" value="Submit Cocktail"></input>
+                <input className="button-29" type="submit" value="Submit Cocktail"></input>
             </form>
+        </div>
         </div>
     )
 }

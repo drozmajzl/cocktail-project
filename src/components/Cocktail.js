@@ -29,16 +29,18 @@ function Cocktail ({ cocktail, updateFavorites, handleRemove }){
 
 
     return(
-        <div className={favorited ? "favoriteCocktail" : "cocktail"}>
+        <div className="card-container">
+        <div  id="cocktail-card" className={favorited ? "favoriteCocktail" : "cocktail"}>
             <div onClick={() => setMoreInfoDisplay(!moreInfoDisplay)}>
-                <h2>{name}</h2>
+                <h1 className="card-header">{name}</h1>
                 <img id="cocktailimage" src={image}></img>
-                <h3>{description}</h3>
+                <p>{description}</p>
                 <p> {moreInfoDisplay ? ingredientsList : null } </p>
                 <p> {moreInfoDisplay ? directions : null } </p>
             </div>
-            <button className="favorite" onClick={handleFavorite}>{favorited ? "Unfavorite ★" : "Favorite ✰"}</button>
-            {userAdded ? <button onClick={() => handleRemove(id)}>REMOVE</button> : null}
+            <button className="button-29" onClick={handleFavorite}>{favorited ? "Unfavorite ★" : "Favorite ✰"}</button>
+            {userAdded ? <button id="card-button" className="button-28" onClick={() => handleRemove(id)}>REMOVE</button> : null}
+        </div>
         </div>
     )
 

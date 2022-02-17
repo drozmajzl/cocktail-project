@@ -8,6 +8,7 @@
   -webkit-animation: AnimationName 4s ease infinite;
   -moz-animation: AnimationName 4s ease infinite;
   animation: AnimationName 4s ease infinite;
+  color: #E6EEFF;
 }
 
 .App-header {
@@ -57,4 +58,163 @@
   0%{background-position:0% 53%}
   50%{background-position:100% 48%}
   100%{background-position:0% 53%}
+}
+
+/* CSS */
+.button-28 {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #E6EEFF;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #E6EEFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+}
+
+.button-28:disabled {
+  pointer-events: none;
+}
+
+.button-28:hover {
+  color: #fff;
+  background-color: #766c78;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-28:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+.button-29 {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #E6EEFF;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #E6EEFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 20%;
+  will-change: transform;
+}
+
+.button-29:disabled {
+  pointer-events: none;
+}
+
+.button-29:hover {
+  color: #fff;
+  background-color: #766c78;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-29:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+#cocktail-card {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  border: 3px #4a4a4a solid;
+  height: 30%;
+  text-align: center;
+  padding: 2px 16px;
+  justify-content: center;
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto
+}
+.card-header {
+  height: 30%;
+  color: #4a4a4a;
+  background: #E6EEFF;
+  text-align: center;
+  border-radius: 15px;
+  float:left;
+  width: 30%
+}
+.card-container{
+padding: 10px 16px;
+}
+
+.form-card {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  border: 3px #4a4a4a solid;
+  height: 30%;
+  text-align: center;
+  padding: 2px 16px;
+  justify-content: center;
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.form-container{
+  padding: 10px 16px;
+}
+#cocktail-card:hover{
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+#card-button{
+  width: 20%;
+}
+.topnav button {
+  display:inline-block;
+}
+#cocktailimage{
+  float: left;
+}
+input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+.d-input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 15px;
 }

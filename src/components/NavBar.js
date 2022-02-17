@@ -2,6 +2,7 @@ import '../App.css';
 import { NavLink } from "react-router-dom";
 
 
+
 function NavBar(){
   
     return(
@@ -10,24 +11,24 @@ function NavBar(){
         to="/"
         exact
         >
-        <button type="button">
-          Home
+        <button className="button-28" type="button">
+        ⌂
         </button>
         </NavLink>
         <NavLink
         to="/menu"
         exact
         >
-        <button type="button">
-          Menu
+        <button className="button-28" type="button">
+        &#128441;
         </button>
       </NavLink>
       <NavLink
         to="/addCocktail"
         exact
         >
-        <button type="button">
-          Add A Cocktail!
+        <button className="button-28" type="button">
+        🍸 Add!
         </button>
       </NavLink>
     </nav>
