@@ -1,5 +1,5 @@
 
-.App {
+body {
   /* TODO good background - color or image?  */
   text-align: center;
   background: linear-gradient(172deg, #38517b, #545c6a, #665a74, #acae54);
@@ -29,7 +29,6 @@
 #home-div{
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
-
 }
 
 .dropdown {
