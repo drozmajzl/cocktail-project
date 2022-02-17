@@ -45,6 +45,7 @@
   /* grid-template-rows: repeat(10, 1fr); */
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+
   }
 #cocktailimage {
   /* TODO scale images to page size */
@@ -164,22 +165,27 @@
 }
 
 .card-container{
-  padding: 10px 16px;
-  width: 30vw;
+  padding: 50px;
+  width: 40vw;
   display:flex;
+  margin-left:auto;
+  margin-right:auto;
+  height: 500px;
 }
 
 #cocktail-card {
   display: flex;
-  flex-direction: column;
+  flex-direction:column;
   border: 3px #4a4a4a solid;
-  height: 30vw;
+  height: 50vw;
   text-align: center;
   padding: 16px;
   justify-content: center;
   border-radius: 15px;
   margin-left: auto;
   margin-right: auto;
+  /* height:fit-content; */
+  width:fit-content;
   
 }
 .card-header {
