@@ -35,6 +35,7 @@ function NavBar(){
         🍸 Submit a Cocktail🍸
         </button>
       </NavLink>
+      {homeRoute ? <p id="home-heading">Welcome. Scroll down for some favorite cocktails.</p> : null}
     </nav>
     )
 }

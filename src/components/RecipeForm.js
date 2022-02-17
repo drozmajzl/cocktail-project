@@ -82,9 +82,8 @@ function RecipeForm({handleNewCocktail}){
       }
 
     const ingredientsDisplay = ingredients.map(ingredient => (
-        <div key={`${ingredient.ingredient}Div`}>
-            <li key={ingredient.ingredient}>{ingredient.quantity} {ingredient.ingredient}</li>
-            <button key={`${ingredient.ingredient}Button`} id="deleteIngredient" onClick={handleDeleteIngredient}>X</button>
+        <div className="ingredient-div" key={`${ingredient.ingredient}Div`}>
+            <li className="ingredient-listing" key={ingredient.ingredient}>{ingredient.quantity} {ingredient.ingredient}</li><button key={`${ingredient.ingredient}Button`} id="deleteIngredient" onClick={handleDeleteIngredient}>X</button>
         </div>
     ));
 
@@ -97,7 +96,7 @@ function RecipeForm({handleNewCocktail}){
                 <br/>
                 <input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)}></input>
                 <br/>
-                <label>Category:</label><br/>
+                <br/>
                 <select name="category" className="dropdown" value={category} onChange={(e) => setCategory(e.target.value)}>
                     <option value="select">Select category...</option>
                     <option value="classic">Classic</option>
@@ -106,7 +105,7 @@ function RecipeForm({handleNewCocktail}){
                     <option value="latin">Latin</option>
                     <option value="other">Other</option>
                 </select>
-                <br/>
+                <br></br><br/>
             </form>
             <form name="ingredients" onSubmit={handleSubmitIngredient}>
                     <label>Ingredient:</label>
@@ -117,8 +116,7 @@ function RecipeForm({handleNewCocktail}){
                     <br/>
                     <input className="ingredient-input" type="text" name="quantity" id="ingredientQuantity" value={quantity} onChange={(e) => setQuantity(e.target.value)}></input>
                     <br/>
-                    <input className="button-29" type="submit" name="addIngredient" value="Add Ingredient" id="ingredientName"></input>
-                    {/* Take ingredient + quantity inputs, create object, add object to array of ingredients (in state), */}
+                    <input className="button-29" type="submit" name="addIngredient" value="Add Ingredient" id="ingredientName"></input><br/>
             </form>
             {ingredientsDisplay}
             <form onSubmit={handleSubmit}>
