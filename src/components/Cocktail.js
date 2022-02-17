@@ -33,11 +33,10 @@ function Cocktail ({ cocktail, updateFavorites, handleRemove }){
         <div  id="cocktail-card" className={favorited ? "favoriteCocktail" : "cocktail"}>
             <div onClick={() => setMoreInfoDisplay(!moreInfoDisplay)}>
                 <h1 className="card-header">{name}</h1>
-                <p>{description}</p>
+                <img id="cocktailimage" src={image}></img>
+                <p id="cocktail-description">{description}</p>
                 <p> {moreInfoDisplay ? ingredientsList : null } </p>
                 <p> {moreInfoDisplay ? directions : null } </p>
-                <img id="cocktailimage" src={image}></img>
-
             </div>
             <button className="button-29" onClick={handleFavorite}>{favorited ? "Unfavorite ★" : "Favorite ✰"}</button>
             {userAdded ? <button id="card-button" className="button-28" onClick={() => handleRemove(id)}>REMOVE</button> : null}
