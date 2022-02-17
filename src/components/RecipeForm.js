@@ -98,7 +98,7 @@ function RecipeForm({handleNewCocktail}){
                 <input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)}></input>
                 <br/>
                 <label>Category:</label><br/>
-                <select name="category" value={category} onChange={(e) => setCategory(e.target.value)}>
+                <select name="category" className="dropdown" value={category} onChange={(e) => setCategory(e.target.value)}>
                     <option value="select">Select category...</option>
                     <option value="classic">Classic</option>
                     <option value="basic">Basic</option>
