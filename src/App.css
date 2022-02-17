@@ -21,6 +21,9 @@ body {
   color: white;
 }
 
+.expandedCocktail {
+  background-color:rgba(255, 255, 255, 0.158);
+}
 
 .App-link {
   color: #61dafb;
@@ -55,8 +58,6 @@ body {
   display:flex;
 }
 
-.favoriteCocktail {
-}
 
 @-webkit-keyframes AnimationName {
   0%{background-position:0% 53%}
@@ -207,7 +208,19 @@ body {
   border-radius: 15px;
   float:left;
   position:relative;
+}
 
+.card-header-special {
+  height: fit-content;
+  width: fit-content;
+  /* background: #E6EEFF; */
+  text-align: center;
+  border-radius: 15px;
+  color: #E6EEFF;
+  border: 3px #FF99EE solid;
+  float:left;
+  position:relative;
+  animation: flicker 1.5s infinite alternate;
 }
 
 #cocktail-card:hover{

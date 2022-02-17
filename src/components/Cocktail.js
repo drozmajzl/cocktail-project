@@ -30,9 +30,9 @@ function Cocktail ({ cocktail, updateFavorites, handleRemove }){
 
     return(
         <div className="card-container">
-        <div  id="cocktail-card" className={favorited ? "favoriteCocktail" : "cocktail"}>
+        <div id="cocktail-card" className={moreInfoDisplay ? "expandedCocktail" : "cocktail"}>
             <div onClick={() => setMoreInfoDisplay(!moreInfoDisplay)}>
-                <h1 className="card-header">{name}</h1>
+                <h1 className={moreInfoDisplay ? "card-header-special" : "card-header"}>{name}</h1>
                 <img id="cocktailimage" src={image}></img>
                 <p id="cocktail-description">{description}</p>
                 <p> {moreInfoDisplay ? ingredientsList : null } </p>
