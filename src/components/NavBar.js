@@ -7,6 +7,7 @@ function NavBar(){
   
     return(
     <nav className="topnav">
+      <h1 className="logo">Dealer's Choice</h1>
         <NavLink
         to="/"
         exact
