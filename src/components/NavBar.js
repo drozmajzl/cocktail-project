@@ -15,15 +15,15 @@ function NavBar(){
         exact
         >
         {homeRoute ? null : 
-        <button className="button-28" type="button">
-        ⌂
+        <button className="button-28" id="home-button" type="button">
+        Home
         </button>}
         </NavLink>
         <NavLink
         to="/menu"
         exact
         >
-        <button className="button-28" type="button">
+        <button className="button-28 non-home-menu-buttons" type="button">
         &#128441;
         </button>
       </NavLink>
@@ -31,7 +31,7 @@ function NavBar(){
         to="/addCocktail"
         exact
         >
-        <button className="button-28" type="button">
+        <button className="button-28 non-home-menu-buttons" type="button">
         🍸 Submit a Cocktail🍸
         </button>
       </NavLink>

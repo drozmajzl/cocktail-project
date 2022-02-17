@@ -76,6 +76,10 @@
 }
 
 /* CSS */
+/* #home-button{
+  font-size: 36px;
+} */
+
 .button-28 {
   appearance: none;
   background-color: transparent;
@@ -86,11 +90,10 @@
   cursor: pointer;
   display: inline-block;
   font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-  font-size: 16px;
   font-weight: 600;
   line-height: normal;
-  margin: 0;
   min-height: 60px;
+  max-height:60px;
   min-width: 0;
   outline: none;
   padding: 16px 24px;
@@ -100,8 +103,12 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  width: 100%;
+  width: 33%;
   will-change: transform;
+}
+
+.non-home-menu-buttons{
+  font-size:14px;
 }
 
 .button-28:disabled {
@@ -119,6 +126,8 @@
   box-shadow: none;
   transform: translateY(0);
 }
+
+
 .button-29 {
   /* appearance: none; */
   background-color: transparent;

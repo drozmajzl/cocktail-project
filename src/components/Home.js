@@ -8,7 +8,6 @@ const displayCocktails=favorited.map(cocktail=><Cocktail key={cocktail.id} cockt
 
 return(
     <div>
-        <h1>HOME PAGE</h1>
         {displayCocktails}
     </div>
     )
