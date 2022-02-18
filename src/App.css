@@ -8,7 +8,7 @@ body {
   -webkit-animation: AnimationName 4s ease infinite;
   -moz-animation: AnimationName 4s ease infinite;
   animation: AnimationName 4s ease infinite;
-  color: #E6EEFF;
+  color: #d9e0ee;
 }
 
 .App-header {
@@ -22,7 +22,7 @@ body {
 }
 
 .expandedCocktail {
-  background-color:rgba(255, 255, 255, 0.158);
+  background:rgba(255, 255, 255, 0.158);
 }
 
 .App-link {
@@ -216,11 +216,36 @@ body {
   box-shadow: none;
   transform: translateY(0);
 }
+.home-cocktails .cocktail{
+ width:50vw;
+ margin-left: auto;
+ margin-right: auto;
+ background: #6a5e77;
+ border:2px solid #52485c;
 
-.card-container{
+}
+
+#cocktail-description{
+  width:50%;
+  margin-left:auto;
+  margin-right:auto;
+  font-size:18px;
+}
+#menu-title{
+  padding-top:3vw;
+  font-size:40px;
+  text-decoration: underline;
+}
+.card-container {
   padding: 1vw;
   display:flex;
   flex-direction: row;
+  margin-left:auto;
+  margin-right:auto;
+  width:40vw;
+}
+#search-bar-div{
+  width:30vw;
   margin-left:auto;
   margin-right:auto;
 }
@@ -233,14 +258,20 @@ body {
   /* height: 30vw; */
   text-align: center;
   text-size-adjust: auto;
-  padding: 2vw;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+
   justify-content: center;
   border-radius: 15px;
   margin-left: auto;
   margin-right: auto;
   /* height:fit-content; */
-  width:fit-content;
+  width:fit-conten1;
   position:relative;
+ border:2px solid #52485c;
+}
+.cocktail{
+  background: #6a5e77;
 }
 .card-header {
   height: fit-content;
@@ -264,7 +295,8 @@ body {
   border-radius: 15px;
   color: #E6EEFF;
   border: 3px #FF99EE solid;
-  float:left;
+  margin-left:auto;
+  margin-right:auto;
   position:relative;
   animation: flicker 1.5s infinite alternate;
 }

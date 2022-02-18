@@ -20,7 +20,7 @@ function CocktailList({ list, search, categoryFilter, updateFavorites, handleRem
 
     return(
         <>
-            <h1>MENU</h1>
+            <h1 id="menu-title">Cocktail Menu</h1>
             <div id="menudiv">
                 {cocktailsToDisplay}
             </div>

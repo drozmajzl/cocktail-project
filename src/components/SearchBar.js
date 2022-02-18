@@ -3,7 +3,7 @@ import '../App.css';
 function SearchBar({ handleSearch, search, handleCategoryFilter, categoryFilter }) {
 
     return (
-        <div>
+        <div id="search-bar-div">
             <input type="text" placeholder="Search..." value={search} onChange={handleSearch}></input>
             <select name="categories" class="dropdown" value={categoryFilter} onChange={handleCategoryFilter}>
                 <option value="all">All</option>

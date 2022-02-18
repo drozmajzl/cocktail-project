@@ -7,7 +7,7 @@ const favorited=(cocktails.filter(cocktail=>cocktail.personalFavorite))
 const displayCocktails=favorited.map(cocktail=><Cocktail key={cocktail.id} cocktail={cocktail} handleRemove={handleRemove} updateFavorites={updateFavorites}/>)
 
 return(
-    <div>
+    <div className="home-cocktails">
         {displayCocktails}
     </div>
     )
